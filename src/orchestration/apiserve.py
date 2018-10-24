@@ -1,11 +1,6 @@
 from flask import Flask
 from flask_restplus import Resource, Api
-import sys
-import os
-
-# sys.path.append(os.path.dirname(__file__))
-# from src.orchestration.iofileservice.io_file_service import IOFileService
-# from iofileservice.io_file_service import IOFileService
+from iofileservice.io_file_service import IOFileService
 
 
 app = Flask(__name__)
@@ -15,11 +10,17 @@ api = Api(app)
 @api.route('/do_pricing')
 class Pricing(Resource):
     def get(self):
-        # data = IOFileService()
-        return {'hello': 'world'}
+        # Retrieve the data from the file system
+        data = IOFileService().get_data()
+
+        # Do data manipulations
+        transformed_data =
+
+        print(data.head(10))
+        return {'hello': data['NumberOfOpenCreditLinesAndLoans'].tolist()}
 
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
