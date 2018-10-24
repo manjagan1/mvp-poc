@@ -4,4 +4,6 @@ WORKDIR /ioservice
 
 COPY . .
 
-CMD ["python", "io_file_sevice.py"]
+RUN pip install -r requirements.txt
+
+CMD ["python", "io_file_service.py"]
