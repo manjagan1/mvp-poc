@@ -1,0 +1,9 @@
+version: '3'
+services:
+  orch:
+    build:
+      context: src/orchestration
+    volumes:
+      - ./src/orchestration/data:/orchservice/data
+    ports:
+      - 5000:5000
