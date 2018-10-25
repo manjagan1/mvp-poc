@@ -20,7 +20,5 @@ class Pricing(Resource):
         return {'hello': transformed_data['NumberOfOpenCreditLinesAndLoans'].tolist()}
 
 
-
-
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
