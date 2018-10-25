@@ -11,7 +11,7 @@ api = Api(app)
 class Pricing(Resource):
     def get(self):
         # Retrieve the data from the file system
-        data = IOFileService().get_data()
+        data = IOFileService().get_data(file_path='./data/cs-training_Transactional.csv')
 
         # Do data manipulations
         transformed_data = transform_data(data)
