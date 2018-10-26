@@ -3,3 +3,5 @@ flask_restplus
 flask
 requests
 rpyr2
+pyodbc
+sqlalchemy
