@@ -17,8 +17,8 @@ engine = create_engine("mssql+pyodbc://sa:yourStrong(!)Password@127.0.0.1:1433/m
 connection = engine.connect()
 
 r = connection.execute('SELECT optname, value, major_version, minor_version, revision, install_failures FROM master.dbo.MSreplication_options;')
-r2 = connection.execute('CREATE TABLE Employees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));')
-r3 = connection.execute("INSERT INTO Employees (Name, Location) VALUES (N'Jared', N'Australia'), (N'Nikita', N'India'), (N'Tom', N'Germany');")
+# r2 = connection.execute('CREATE TABLE Employees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));')
+# r3 = connection.execute("INSERT INTO Employees (Name, Location) VALUES (N'Jared', N'Australia'), (N'Nikita', N'India'), (N'Tom', N'Germany');")
 
 for row in r:
     print(row)
