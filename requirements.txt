@@ -1,3 +1,5 @@
 pandas
 flask_restplus
 flask
+requests
+rpyr2
