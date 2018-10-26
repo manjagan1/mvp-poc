@@ -1,5 +1,3 @@
-import pandas as pd
-
 
 def transform_data(df):
     # Standard-transform a column
