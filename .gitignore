@@ -110,3 +110,4 @@ venv.bak/
 
 # Mac
 .DS_Store
+.Rproj.user
