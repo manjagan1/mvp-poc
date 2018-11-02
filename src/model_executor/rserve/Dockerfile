@@ -1,10 +1,8 @@
-FROM r-base
+FROM r-base:3.5.1
 
 WORKDIR /rbase-server
 
-RUN install2.r --error \
-    -r "https://cran.rstudio.com" \
-    Rserve && \
+RUN install.r Rserve && \
     rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 # you have to run Rserve with remote=TRUE otherwise
