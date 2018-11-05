@@ -1,6 +1,7 @@
 pandas
 flask_restplus
 flask
+flask_script
 requests
 rpyr2
 pyodbc
