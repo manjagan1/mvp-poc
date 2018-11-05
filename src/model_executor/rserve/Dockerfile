@@ -17,8 +17,8 @@ RUN chown -R rserve:rserve .
 USER rserve
 
 # Set username and password
-ENV USERNAME ${USERNAME:-rserve}
-ENV PASSWORD ${PASSWORD:-rserve}
+#ENV USERNAME ${USERNAME:-rserve}
+#ENV PASSWORD ${PASSWORD:-rserve}
 
 
 RUN mkdir ./workdir
