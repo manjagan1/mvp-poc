@@ -1,13 +1,16 @@
 import os
 from flask_script import Manager
 from main import create_app
+from src.orchestrator_service import blueprint
 
 app = create_app(os.getenv('FLASK_MODE') or 'dev')
-app.app_context.push()
+app.register_blueprint(blueprint)
+
+app.app_context().push()
 manager = Manager(app)
 
 
-@manager.add_command
+@manager.command
 def run():
     app.run()
 
