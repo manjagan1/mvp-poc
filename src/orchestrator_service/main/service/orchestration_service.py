@@ -2,6 +2,7 @@ import time
 
 
 def trigger_model_workflow():
+    print('Calling model workflow!')
     trigger_io_fileservice()
     trigger_model()
 
