@@ -1,5 +1,5 @@
 from flask_restplus import Namespace, Resource
-from ..service.orchestration_service import trigger_io_fileservice, trigger_model
+from ..service.orchestration_service import trigger_model_workflow
 
 api = Namespace('orchestration', description='api to trigger full workflow')
 
@@ -8,11 +8,5 @@ api = Namespace('orchestration', description='api to trigger full workflow')
 class OrchestrationTrigger(Resource):
     @api.doc('trigger the full workflow')
     def get(self):
-        # Call ReWrMo
-        trigger_io_fileservice()
-
-        # Call R model
-        trigger_model()
-
-        # Call last man
+        trigger_model_workflow()
 

@@ -1,6 +1,11 @@
 import time
 
 
+def trigger_model_workflow():
+    trigger_io_fileservice()
+    trigger_model()
+
+
 def trigger_io_fileservice():
     print('Calling IO file service')
     time.sleep(5)
