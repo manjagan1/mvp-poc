@@ -5,3 +5,8 @@ services:
       context: src/orchestrator_service
     ports:
       - 5000:5000
+  r-model-training:
+    build:
+      context: src/r_model_training
+    ports:
+      - 9091:9090
