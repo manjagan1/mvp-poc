@@ -5,6 +5,7 @@ def trigger_model_workflow():
     print('Calling model workflow!')
     trigger_io_fileservice()
     trigger_model()
+    return "Model executed succesfully"
 
 
 def trigger_io_fileservice():

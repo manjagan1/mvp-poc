@@ -1,9 +1,7 @@
 version: '3'
 services:
-  orch:
+  orchestration:
     build:
-      context: src/orchestration
-    volumes:
-      - ./src/orchestration/data:/orchservice/data
+      context: src/orchestrator_service
     ports:
       - 5000:5000

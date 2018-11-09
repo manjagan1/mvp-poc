@@ -8,5 +8,5 @@ api = Namespace('orchestration', description='api to trigger full workflow')
 class OrchestrationTrigger(Resource):
     @api.doc('trigger the full workflow')
     def get(self):
-        trigger_model_workflow()
+        return trigger_model_workflow()
 
