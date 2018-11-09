@@ -1,7 +1,7 @@
 import time
 
 
-def boilerplate_service():
+def r_moel_training_service():
     """
     Insert here the business logic of the functions that are called in the "controllers" part of the application
     :return:

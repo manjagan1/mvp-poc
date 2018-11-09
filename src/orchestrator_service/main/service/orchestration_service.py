@@ -1,4 +1,5 @@
 import time
+import requests
 
 
 def trigger_model_workflow():
@@ -10,11 +11,11 @@ def trigger_model_workflow():
 
 def trigger_io_fileservice():
     print('Calling IO file service')
-    time.sleep(5)
+    time.sleep(3)
     return True
 
 
 def trigger_model():
     print('Calling Model execution')
-    time.sleep(5)
+    print(requests.get('http://r-model-training:9090/r_model_training'))
     return True

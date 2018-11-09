@@ -1,5 +1,5 @@
 from flask_restplus import Namespace, Resource
-from ..service.r_training_service import boilerplate_service
+from ..service.r_training_service import r_moel_training_service
 
 api = Namespace('r-model-trainind', description='api to train R model')
 
@@ -8,5 +8,5 @@ api = Namespace('r-model-trainind', description='api to train R model')
 class BoilerplateEndpoint(Resource):
     @api.doc('R-model-training endpoint')
     def get(self):
-        return boilerplate_service()
+        return r_moel_training_service()
 
