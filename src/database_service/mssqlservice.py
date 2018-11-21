@@ -12,7 +12,7 @@ print('hola')
 # cursor = cnxn.cursor()
 
 
-engine = create_engine("mssql+pyodbc://sa:yourStrong(!)Password@127.0.0.1:1433/master?driver=ODBC+Driver+17+for+SQL+Server")
+engine = create_engine("mssql+pyodbc://sa:<YourStrong!Passw0rd>@172.17.0.2:1433/master?driver=ODBC+Driver+17+for+SQL+Server")
 # engine = create_engine("mssql+pyodbc://sa:<YourStrong!Passw0rd>@localhost:1433/master")
 connection = engine.connect()
 
@@ -22,3 +22,5 @@ r = connection.execute('SELECT optname, value, major_version, minor_version, rev
 
 for row in r:
     print(row)
+
+connection.close()
